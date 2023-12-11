@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HazAware Health Hub</title>
+	<style type="text/css"></style>
+<style id="jsbin-css">
+body{
+    background-color: #F7DC6F;
+	 font-family: sans-serif;
+	 margin: 20px 40px}
+
+h2 {text-align: center;
+  color: green;}
+
+img {display: block;
+  margin-left: auto;
+  margin-right: auto;}
+
+		#mainbox{
+			font-size: 24px;
+			cursor: pointer;
+			transition: all .6s;
+		}
+		.sidemenu{
+			position: fixed;
+			top: 0px;
+			left: 0px;
+			height: 100%;
+			width: 0px;
+			background-color: #A5CF7C;
+			z-index: 1;
+			padding-top: 50px;
+			overflow-x: hidden;
+			transition: all .5s;
+		}
+		.sidemenu a{
+			padding: 3px 3px 3px 40px;
+			text-decoration: none;
+            text-shadow: 2px 2px green;
+			font-size: 20px;
+			color: #FCF95F;
+			display: block;
+		}
+		.sidemenu a:hover{
+			color: white;
+		}
+		.sidemenu .closebtn{
+			position: absolute;
+			top: 0px;
+			right: 10px;
+			font-size: 36px;
+			margin-left: 10px;
+		}
+
+
+/* Setting container to flex and width to 80% of view port */
+.container{
+	display: flex;
+	width: 80%;
+}
+/*Adding background image to each section*/
+.one{
+	background: url(https://i.ibb.co/QDBkxLV/nature.jpg);
+}
+.two{
+	background: url(https://i.ibb.co/0X5cD6z/community.jpg);
+}
+.three{
+	background: url(https://i.ibb.co/DGzr8M1/factory.jpg);
+}
+
+/* Background properties and transition effect to section */
+.section{
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	height: 80vh;
+	cursor: pointer;
+	flex: 0.2;
+	margin:8px;
+	position: relative;
+	transition: all 0.7s ease-out;
+}
+
+/* section with active class will grow flex to 3 times */
+.section.active{
+	flex: 3;
+}
+
+</style>
+</head>
+
+<body>
+ 
+	<div id="mainbox" onclick="openFunction()">&#9776; HazAware</div>
+	<div id="menu" class="sidemenu">
+		<a href="home.html">Home</a>
+		<a href="hazaware.html">HazAware Health Hub</a>
+		<a href="worksafety.html">Work Safety</a>
+        		<a href="stories.html">Stories</a>
+        		<a href="sources.html">Sources</a>
+		<a href="#" class="closebtn" onclick="closeFunction()">&times;</a>
+	</div>
+ 
+  <h2>Sitio Bebe</h2>
+  
+<p>A small town in Pampanga called Sitio Bebe is rich in natural resources and so most of the people here works in mining or in factories. Working in that kind of environment makes them prone to sickness especially acute respiratory infections.</p>
+<p>That is where knowledge about safety measures in your workplace is important. It prevents the workers from having diseases. Wearing proper preventive tools and following safety measures allows them to be in a safe workplace.</p>
+  
+<!-- Container -->
+<div class="container">
+  
+	<!-- Div with section and active -->
+	<div class="section one active"></div>
+  
+	<!-- All another div with section -->
+	<div class="section two"></div>
+	<div class="section three"></div>
+</div>
+
+	<script type="text/javascript">
+	</script>
+<script id="jsbin-javascript">
+function openFunction(){
+			document.getElementById("menu").style.width="300px";
+            document.getElementById("mainbox").style.color = "yellow";
+			document.getElementById("mainbox").style.marginLeft="300px";
+			document.getElementById("mainbox").innerHTML="HazAware";
+}
+		
+function closeFunction(){
+			document.getElementById("menu").style.width="0px";
+            document.getElementById("mainbox").style.color = "yellow";
+			document.getElementById("mainbox").style.marginLeft="0px";
+			document.getElementById("mainbox").innerHTML="&#9776; HazAware";
+}
+
+// Selecting all sections with class of section
+		const sections = document.querySelectorAll('.section')
+
+// Foreach section when clicked
+	sections.forEach((section) => {
+		section.addEventListener("click", () => {
+			
+		// remove active class from all another section and
+		// add it to the selected section
+		sections.forEach((section) => {
+			section.classList.remove("active");
+		});
+		section.classList.add("active");
+		});
+	});
+
+
+</script>
+</body>
+</html>

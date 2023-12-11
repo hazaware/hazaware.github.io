@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HazAware Health Hub</title>
+	<style type="text/css"></style>
+<style id="jsbin-css">
+body{
+    background-color: #F7DC6F;
+	 font-family:"Merriweather", sans;
+      text-shadow:3px 3px 3px #ababab;
+	 margin: 20px 40px}
+
+		#mainbox{
+			font-size: 24px;
+			cursor: pointer;
+			transition: all .6s;
+		}
+		.sidemenu{
+			position: fixed;
+			top: 0px;
+			left: 0px;
+			height: 100%;
+			width: 0px;
+			background-color: #A5CF7C;
+			z-index: 1;
+			padding-top: 50px;
+			overflow-x: hidden;
+			transition: all .5s;
+		}
+		.sidemenu a{
+			padding: 3px 3px 3px 40px;
+			text-decoration: none;
+            text-shadow: 2px 2px green;
+			font-size: 20px;
+			color: #FCF95F;
+			display: block;
+		}
+		.sidemenu a:hover{
+			color: white;
+		}
+		.sidemenu .closebtn{
+			position: absolute;
+			top: 0px;
+			right: 10px;
+			font-size: 36px;
+			margin-left: 10px;
+		}
+
+        .collapsible {
+        background-color: #63EE98;
+        color: yellow;
+        cursor: pointer;
+        padding: 15px;
+        width: 100%;
+        border: none;
+        text-align: center;
+        outline: none;
+        font-size: 25px;}
+
+        .active, .collapsible:hover {
+        background-color: #ADF7C9;}
+
+        .content {
+        padding: 0 18px;
+        display: none;
+        overflow: hidden;
+        background-color: #ADF7C9;}
+
+</style>
+</head>
+
+<body>
+ 
+	<div id="mainbox" onclick="openFunction()">&#9776; HazAware</div>
+	<div id="menu" class="sidemenu">
+		<a href="#">Home</a>
+		<a href="#">HazAware Health Hub</a>
+		<a href="#">Work Safety</a>
+ 		<a href="#">Stories</a>
+        		<a href="#">Sources</a>
+		<a href="#" class="closebtn" onclick="closeFunction()">&times;</a>
+	</div>
+
+  <br>
+<button type="button" class="collapsible">References</button>
+<div class="content">
+
+<p>**Occupational Safety and Health Administration (OSHA):**<br>
+  Website: <a href="https://www.osha.gov/">https://www.osha.gov/</a>
+<br>
+<br>
+**National Institute for Occupational Safety and Health (NIOSH):**<br>
+  Website: <a href="https://www.cdc.gov/niosh/">https://www.cdc.gov/niosh/</a> 
+<br>
+<br>
+**Health and Safety Executive (HSE):**<br>
+Website: <a href="https://www.hse.gov.uk/">https://www.hse.gov.uk/</a>
+<br>
+<br>
+**Occupational Safety and Health Service (New Zealand):**<br>
+Website: <a href="https://worksafe.govt.nz/">https://worksafe.govt.nz/</a>
+<br>
+<br>
+**National Safety Council (NSC):**<br>
+   Website: <a href="https://www.nsc.org/">https://www.nsc.org/</a>
+<br>
+<br>
+**European Agency for Safety and Health at Work (EU-OSHA):**<br>
+   Website: <a href="https://osha.europa.eu/">https://osha.europa.eu/</a>
+<br>
+<br>
+**Canadian Centre for Occupational Health and Safety (CCOHS):**<br>
+   Website: <a href="https://www.ccohs.ca/">https://www.ccohs.ca/</a>
+<br>
+<br>
+**American Red Cross:**<br>
+   Website: <a href="https://www.redcross.org/">https://www.redcross.org/</a>
+<br>
+<br>
+**National Fire Protection Association (NFPA):**<br>
+   Website: <a href="https://www.nfpa.org/">https://www.nfpa.org/</a>
+<br>
+<br>
+**International Labour Organization (ILO):**<br>
+    Website: <a href="https://www.ilo.org/">https://www.ilo.org/</a></p>
+
+	<script type="text/javascript">
+	</script>
+<script id="jsbin-javascript">
+function openFunction(){
+			document.getElementById("menu").style.width="300px";
+            document.getElementById("mainbox").style.color = "yellow";
+			document.getElementById("mainbox").style.marginLeft="300px";
+			document.getElementById("mainbox").innerHTML="HazAware";
+}
+		
+function closeFunction(){
+			document.getElementById("menu").style.width="0px";
+            document.getElementById("mainbox").style.color = "yellow";
+			document.getElementById("mainbox").style.marginLeft="0px";
+			document.getElementById("mainbox").innerHTML="&#9776; HazAware";
+}
+
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";} else {
+      content.style.display = "block";}
+  });
+}
+
+</script>
+</body>
+</html>

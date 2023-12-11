@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HazAware Health Hub</title>
+	<style type="text/css"></style>
+<style id="jsbin-css">
+body{
+    background-color: #F7DC6F;
+	 font-family: sans-serif;
+	 margin: 20px 40px}
+
+h2 {text-align: center;
+  color: green;}
+
+img {display: block;
+  margin-left: auto;
+  margin-right: auto;}
+
+		#mainbox{
+			font-size: 24px;
+			cursor: pointer;
+			transition: all .6s;
+		}
+		.sidemenu{
+			position: fixed;
+			top: 0px;
+			left: 0px;
+			height: 100%;
+			width: 0px;
+			background-color: #A5CF7C;
+			z-index: 1;
+			padding-top: 50px;
+			overflow-x: hidden;
+			transition: all .5s;
+		}
+		.sidemenu a{
+			padding: 3px 3px 3px 40px;
+			text-decoration: none;
+            text-shadow: 2px 2px green;
+			font-size: 20px;
+			color: #FCF95F;
+			display: block;
+		}
+		.sidemenu a:hover{
+			color: white;
+		}
+		.sidemenu .closebtn{
+			position: absolute;
+			top: 0px;
+			right: 10px;
+			font-size: 36px;
+			margin-left: 10px;
+		}
+
+document.getElementById("mainbox").innerHTML= = ="Click on Cross Element and Close Menu";
+document.getElementById("mainbox").style.color = 'yellow';
+</style>
+</head>
+
+<body>
+ 
+	<div id="mainbox" onclick="openFunction()">&#9776; HazAware</div>
+	<div id="menu" class="sidemenu">
+		<a href="home.html">Home</a>
+		<a href="hazaware.html">HazAware Health Hub</a>
+		<a href="worksafety.html">Work Safety</a>
+        		<a href="stories.html">Stories</a>
+        		<a href="sources.html">Sources</a>
+		<a href="#" class="closebtn" onclick="closeFunction()">&times;</a>
+	</div>
+ 
+  <h2>Youtube  Channel - HazAware Health Hub</h2>
+
+<script src="https://cdn.commoninja.com/sdk/latest/commonninja.js" defer></script>
+<div class="commonninja_component pid-0a7b8b65-0dc3-412b-b015-77e6b3f6446d"></div>
+ 
+  <script type="text/javascript">
+	</script>
+<script id="jsbin-javascript">
+function openFunction(){
+			document.getElementById("menu").style.width="300px";
+            document.getElementById("mainbox").style.color = "yellow";
+			document.getElementById("mainbox").style.marginLeft="300px";
+			document.getElementById("mainbox").innerHTML="HazAware";
+}
+		
+function closeFunction(){
+			document.getElementById("menu").style.width="0px";
+            document.getElementById("mainbox").style.color = "yellow";
+			document.getElementById("mainbox").style.marginLeft="0px";
+			document.getElementById("mainbox").innerHTML="&#9776; HazAware";
+}
+
+function scroll(){
+  
+}
+
+
+</script>
+</body>
+</html>
